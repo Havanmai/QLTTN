@@ -1,0 +1,12 @@
+E:\C#\QLDTTN\Quanlydethi\Quanlydethi\bin\Debug\Quanlydethi.exe.config
+E:\C#\QLDTTN\Quanlydethi\Quanlydethi\bin\Debug\Quanlydethi.exe
+E:\C#\QLDTTN\Quanlydethi\Quanlydethi\bin\Debug\Quanlydethi.pdb
+E:\C#\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.csproj.AssemblyReference.cache
+E:\C#\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.csproj.SuggestedBindingRedirects.cache
+E:\C#\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.FormLogin.resources
+E:\C#\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.GUI.Admin.FormHome.resources
+E:\C#\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.Properties.Resources.resources
+E:\C#\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.csproj.GenerateResource.cache
+E:\C#\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.csproj.CoreCompileInputs.cache
+E:\C#\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.exe
+E:\C#\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.pdb
