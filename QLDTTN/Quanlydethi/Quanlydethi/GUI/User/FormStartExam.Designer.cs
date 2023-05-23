@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
             this.lblNameUser = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@
             this.lblSub = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +60,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(276, 363);
             this.panel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(18, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 17);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Mã sinh viên : ";
             // 
             // btnExit
             // 
@@ -109,7 +119,7 @@
             this.cbSub.FormattingEnabled = true;
             this.cbSub.Items.AddRange(new object[] {
             "C#",
-            "Java Cơ Bản"});
+            "Java"});
             this.cbSub.Location = new System.Drawing.Point(123, 127);
             this.cbSub.Name = "cbSub";
             this.cbSub.Size = new System.Drawing.Size(118, 21);
@@ -165,16 +175,6 @@
             this.lblName.Size = new System.Drawing.Size(81, 17);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Họ và tên : ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(18, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 17);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Mã sinh viên : ";
             // 
             // FormStartExam
             // 

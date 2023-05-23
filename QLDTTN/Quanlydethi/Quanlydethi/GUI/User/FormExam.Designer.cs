@@ -50,6 +50,7 @@
             this.btnNext = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label8 = new System.Windows.Forms.Label();
+            this.lbMa = new System.Windows.Forms.Label();
             this.grbQuestion.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,7 +79,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 101);
+            this.label3.Location = new System.Drawing.Point(16, 99);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 24);
             this.label3.TabIndex = 2;
@@ -89,20 +90,22 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblName.Location = new System.Drawing.Point(130, 22);
+            this.lblName.Location = new System.Drawing.Point(153, 59);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(0, 24);
+            this.lblName.Size = new System.Drawing.Size(93, 24);
             this.lblName.TabIndex = 3;
+            this.lblName.Text = "lblName ";
             // 
             // lblSub
             // 
             this.lblSub.AutoSize = true;
             this.lblSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSub.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblSub.Location = new System.Drawing.Point(110, 72);
+            this.lblSub.Location = new System.Drawing.Point(147, 99);
             this.lblSub.Name = "lblSub";
-            this.lblSub.Size = new System.Drawing.Size(0, 24);
+            this.lblSub.Size = new System.Drawing.Size(75, 24);
             this.lblSub.TabIndex = 4;
+            this.lblSub.Text = "lblSub ";
             // 
             // grbQuestion
             // 
@@ -271,11 +274,23 @@
             this.label8.TabIndex = 10;
             this.label8.Text = "Mã sinh viên : ";
             // 
+            // lbMa
+            // 
+            this.lbMa.AutoSize = true;
+            this.lbMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMa.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbMa.Location = new System.Drawing.Point(180, 22);
+            this.lbMa.Name = "lbMa";
+            this.lbMa.Size = new System.Drawing.Size(66, 24);
+            this.lbMa.TabIndex = 11;
+            this.lbMa.Text = "label9";
+            // 
             // FormExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1088, 708);
+            this.Controls.Add(this.lbMa);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnPre);
@@ -320,5 +335,6 @@
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbMa;
     }
 }

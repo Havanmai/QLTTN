@@ -14,10 +14,12 @@ namespace Quanlydethi.GUI.User
     public partial class FormStartExam : Form
     {
         string idname;
-        public FormStartExam(String name)
+        string name;
+        public FormStartExam(String id, String name)
         {
             InitializeComponent();
-            idname = name;
+            idname = id;
+            name = name;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -27,16 +29,16 @@ namespace Quanlydethi.GUI.User
 
         private void FormStartExam_Load(object sender, EventArgs e)
         {
-            lblNameUser.Text = idname;
+            lblNameUser.Text = name;
             lblTime.Text = "30 phút";
             dtpNow.Text =  DateTime.Now.ToString();
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            if (cbSub.SelectedItem.Equals("Java Cơ Bản"))
+            if (cbSub.SelectedItem.Equals("Java"))
             {
-                FormExam fe = new FormExam(idname, "Java Cơ Bản");
+                FormExam fe = new FormExam(idname, "Java",name);
                 fe.Show();
                 this.Close();
             }

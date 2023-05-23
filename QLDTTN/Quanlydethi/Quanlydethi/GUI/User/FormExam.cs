@@ -22,7 +22,7 @@ namespace Quanlydethi.GUI.User
         private int gio, phut, giay;
 
         private String TenThiSinh;
-
+        private String MaThiSinh;
         private int SocauDung = 0, SoCauSai = 0;
 
         private int Cauhientai = 0;
@@ -31,11 +31,13 @@ namespace Quanlydethi.GUI.User
         //Dữ Liệu Bảng dùng Để Check True False Khi chọn đáp Án
         DataTable dulieubang = new DataTable();
         String Mon;
-        public FormExam(String Hoten, String Tenmon)
+        public FormExam(String Ma, String Tenmon, String name)
         {
             InitializeComponent();
-            TenThiSinh = Hoten;
+           
             Mon = Tenmon;
+            MaThiSinh=Ma;
+            TenThiSinh = name;
         }
 
 
@@ -44,7 +46,7 @@ namespace Quanlydethi.GUI.User
             try
             {
                 SqlConnection cnn = new SqlConnection(DataProvider.sqlConnection);
-                SqlDataAdapter da = new SqlDataAdapter("select CAUHOI.MACH,TENCH,A,B,C,D ,Dapan from CAUHOI,DAPAN where CAUHOI.MACH=DAPAN.MACH", cnn);
+                SqlDataAdapter da = new SqlDataAdapter("select MACH,TENCH,A,B,C,D ,Dapan from CAUHOI", cnn);
                 DataTable BangQuestion = new DataTable();
                 da.Fill(BangQuestion);
                 TaobangRandomCauhoi(BangQuestion);
@@ -294,6 +296,7 @@ namespace Quanlydethi.GUI.User
             LoadcauhoiLenFrom();
             lblName.Text = TenThiSinh;
             lblSub.Text = Mon;
+            lbMa.Text = MaThiSinh;
         }
 
         int th = 0;
@@ -340,13 +343,6 @@ namespace Quanlydethi.GUI.User
             }
 
         }
-
-       
-
-
-
-
-
 
     }
 }

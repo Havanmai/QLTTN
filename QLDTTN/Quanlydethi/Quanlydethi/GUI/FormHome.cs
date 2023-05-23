@@ -24,9 +24,27 @@ namespace Quanlydethi.GUI
             InitializeComponent();
             _frmLogin = Form;
             IdName = Usename;
-            lbl_username.Text = IdName + "!";
+            
+            lbl_username.Text = !Check_Role()? (getName() + "!"): (Usename + "!");
             Role_USer();
             grbHelp.Visible = false;
+        }
+
+
+        public String getName()
+        {
+            SqlConnection con = new SqlConnection(DataProvider.sqlConnection);
+            con.Open();
+
+            SqlCommand comand = new SqlCommand("Select HOTENTHISINH from THISINHX WHERE MATHISINH ='" + IdName + "'", con);
+            SqlDataReader r = comand.ExecuteReader();
+            r.Read();
+
+            return r.GetValue(0).ToString();
+            
+
+            r.Close();
+            con.Close();
         }
 
         String x;
@@ -62,6 +80,8 @@ namespace Quanlydethi.GUI
                 HistoryExamToolStripMenuItem.Visible = true;
                 ExamToolStripMenuItem.Visible = false;
                 helpToolStripMenuItem.Visible = true;
+                classToolStripMenuItem.Visible = true;
+                subToolStripMenuItem.Visible = true;
             }
             else
             {
@@ -70,9 +90,11 @@ namespace Quanlydethi.GUI
                 MangamentUserToolStripMenuItem.Visible = false;
                 sltStudent.Visible = false;
                 QuestionToolStripMenuItem.Visible = false;
-                HistoryExamToolStripMenuItem.Visible = false;
+                HistoryExamToolStripMenuItem.Visible = true;
                 ExamToolStripMenuItem.Visible = true;
                 helpToolStripMenuItem.Visible = true;
+                classToolStripMenuItem.Visible = false;
+                subToolStripMenuItem.Visible = false;
             }
 
         }
@@ -87,7 +109,7 @@ namespace Quanlydethi.GUI
         private void UserToolStripMenuItem_Click(object sender, EventArgs e)
         {
             grbHelp.Visible = false;
-            FormRegister user = new FormRegister();
+            FormCreateTS user = new FormCreateTS();
             user.Show();
         }
 
@@ -130,7 +152,7 @@ namespace Quanlydethi.GUI
         private void ExamToolStripMenuItem_Click(object sender, EventArgs e)
         {
             grbHelp.Visible = false;
-            FormStartExam exam= new FormStartExam(IdName);
+            FormStartExam exam= new FormStartExam(IdName,getName());
             exam.Show();
         }
 
@@ -150,7 +172,7 @@ namespace Quanlydethi.GUI
         private void UserToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             grbHelp.Visible = false;
-            FormRegister user = new FormRegister();
+            FormCreateTS user = new FormCreateTS();
             user.Show();
         }
 
@@ -164,7 +186,7 @@ namespace Quanlydethi.GUI
         private void creatStudentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             grbHelp.Visible = false;
-            FormRegister user = new FormRegister();
+            FormCreateTS user = new FormCreateTS();
             user.Show();
         }
 

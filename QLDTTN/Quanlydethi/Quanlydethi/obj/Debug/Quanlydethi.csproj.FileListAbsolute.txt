@@ -47,7 +47,6 @@ D:\QLTTN\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.csproj.SuggestedBi
 D:\QLTTN\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.FormLogin.resources
 D:\QLTTN\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.GUI.Admin.FormAdmin.resources
 D:\QLTTN\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.GUI.Admin.FormQuestion.resources
-D:\QLTTN\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.GUI.Admin.FormRegister.resources
 D:\QLTTN\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.GUI.Admin.FormStudent.resources
 D:\QLTTN\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.GUI.FormChangePassword.resources
 D:\QLTTN\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.GUI.FormHistory.resources
@@ -62,3 +61,4 @@ D:\QLTTN\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.exe
 D:\QLTTN\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.pdb
 D:\QLTTN\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.GUI.Admin.FormClass.resources
 D:\QLTTN\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.GUI.Admin.FormSub.resources
+D:\QLTTN\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.GUI.Admin.FormCreateTS.resources

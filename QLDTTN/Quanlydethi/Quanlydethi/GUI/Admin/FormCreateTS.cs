@@ -15,9 +15,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Quanlydethi.GUI.Admin
 {
-    public partial class FormRegister : Form
+    public partial class FormCreateTS : Form
     {
-        public FormRegister()
+        public FormCreateTS()
         {
             InitializeComponent();
             
@@ -65,11 +65,13 @@ namespace Quanlydethi.GUI.Admin
                 r.Close();
             con2.Close();
         }
+
+
         //  Khi dang ky Ta can Them du lieu vao Hai bang :v
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text.Trim().Equals("") || txtPassword.Text.Trim().Equals("") || txtEmail.Text.Trim().Equals("") || 
+            if (txtUsername.Text.Trim().Equals("")  || txtEmail.Text.Trim().Equals("") || 
                dtpDateBorn.Text.Trim().Equals("") || txtAddress.Text.Trim().Equals(""))
             {
                 MessageBox.Show("Thông Tin Đã đủ chưa , Thiếu kìa ");
@@ -126,5 +128,7 @@ namespace Quanlydethi.GUI.Admin
         {
             this.getALLLop();
         }
+
+       
     }
 }
