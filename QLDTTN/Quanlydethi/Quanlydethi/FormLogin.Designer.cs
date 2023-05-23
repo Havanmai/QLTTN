@@ -62,7 +62,7 @@
             this.chkb_visiblePassword.Location = new System.Drawing.Point(156, 205);
             this.chkb_visiblePassword.Name = "chkb_visiblePassword";
             this.chkb_visiblePassword.Size = new System.Drawing.Size(137, 20);
-            this.chkb_visiblePassword.TabIndex = 5;
+            this.chkb_visiblePassword.TabIndex = 2;
             this.chkb_visiblePassword.Text = "Hiển thị mật khẩu";
             this.chkb_visiblePassword.UseVisualStyleBackColor = true;
             this.chkb_visiblePassword.CheckedChanged += new System.EventHandler(this.chkb_visiblePassword_CheckedChanged);
@@ -74,17 +74,9 @@
             this.txtPassword.Location = new System.Drawing.Point(156, 146);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(219, 25);
-            this.txtPassword.TabIndex = 4;
+            this.txtPassword.TabIndex = 1;
             this.txtPassword.UseSystemPasswordChar = true;
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Font = new System.Drawing.Font("Lucida Handwriting", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(156, 90);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(219, 25);
-            this.txtUsername.TabIndex = 3;
-            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
+           
             // 
             // label_matkhau
             // 
@@ -116,18 +108,32 @@
             this.tieuDeForm.Location = new System.Drawing.Point(104, 20);
             this.tieuDeForm.Name = "tieuDeForm";
             this.tieuDeForm.Size = new System.Drawing.Size(179, 36);
-            this.tieuDeForm.TabIndex = 0;
+            this.tieuDeForm.TabIndex = 5;
             this.tieuDeForm.Text = "Đăng nhập";
             this.tieuDeForm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tieuDeForm.WordWrap = true;
+            // 
+            // txtUsername
+            // 
+            
+            this.txtUsername.Font = new System.Drawing.Font("Lucida Handwriting", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(156, 90);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(219, 25);
+            this.txtUsername.TabIndex = 0;
+            this.txtUsername.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtUsername.UseWaitCursor = true;
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // btnLogin
             // 
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.btnLogin.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btnLogin.Font = new System.Drawing.Font("Lucida Handwriting", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Location = new System.Drawing.Point(445, 385);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(136, 39);
-            this.btnLogin.TabIndex = 1;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -138,7 +144,7 @@
             this.btnCancel.Location = new System.Drawing.Point(606, 385);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(104, 39);
-            this.btnCancel.TabIndex = 2;
+            this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);

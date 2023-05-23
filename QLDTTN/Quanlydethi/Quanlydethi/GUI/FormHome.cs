@@ -54,25 +54,25 @@ namespace Quanlydethi.GUI
         {
             if (Check_Role() == true)
             {
-                logOutToolStripMenuItem.Enabled = true;
-                changePassToolStripMenuItem.Enabled = true;
-                MangamentUserToolStripMenuItem.Enabled = true;
-                sltStudent.Enabled = true;
-                QuestionToolStripMenuItem.Enabled = true;
-                HistoryExamToolStripMenuItem.Enabled = true;
-                ExamToolStripMenuItem.Enabled = false;
-                helpToolStripMenuItem.Enabled = true;
+                logOutToolStripMenuItem.Visible = true;
+                changePassToolStripMenuItem.Visible = true;
+                MangamentUserToolStripMenuItem.Visible = true;
+                sltStudent.Visible = true;
+                QuestionToolStripMenuItem.Visible = true;
+                HistoryExamToolStripMenuItem.Visible = true;
+                ExamToolStripMenuItem.Visible = false;
+                helpToolStripMenuItem.Visible = true;
             }
             else
             {
-                logOutToolStripMenuItem.Enabled = true;
-                changePassToolStripMenuItem.Enabled = true;
-                MangamentUserToolStripMenuItem.Enabled = false;
-                sltStudent.Enabled = false;
-                QuestionToolStripMenuItem.Enabled = false;
-                HistoryExamToolStripMenuItem.Enabled = false;
-                ExamToolStripMenuItem.Enabled = true;
-                helpToolStripMenuItem.Enabled = true;
+                logOutToolStripMenuItem.Visible = true;
+                changePassToolStripMenuItem.Visible = true;
+                MangamentUserToolStripMenuItem.Visible = false;
+                sltStudent.Visible = false;
+                QuestionToolStripMenuItem.Visible = false;
+                HistoryExamToolStripMenuItem.Visible = false;
+                ExamToolStripMenuItem.Visible = true;
+                helpToolStripMenuItem.Visible = true;
             }
 
         }
@@ -109,8 +109,7 @@ namespace Quanlydethi.GUI
         private void sltStudent_Click(object sender, EventArgs e)
         {
             grbHelp.Visible = false;
-            FormStudent student = new FormStudent();
-            student.Show();
+           
         }
 
         private void QuestionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -146,6 +145,41 @@ namespace Quanlydethi.GUI
             grbHelp.Visible = false;
             FormAdmin admin = new FormAdmin();  
             admin.Show();
+        }
+
+        private void UserToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            grbHelp.Visible = false;
+            FormRegister user = new FormRegister();
+            user.Show();
+        }
+
+        private void listStudentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            grbHelp.Visible = false;
+            FormStudent student = new FormStudent();
+            student.Show();
+        }
+
+        private void creatStudentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            grbHelp.Visible = false;
+            FormRegister user = new FormRegister();
+            user.Show();
+        }
+
+        private void subToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            grbHelp.Visible = false;
+            FormSub sub = new FormSub();
+            sub.Show();
+        }
+
+        private void classToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            grbHelp.Visible = false;
+            FormClass clas= new FormClass();
+            clas.Show();
         }
     }
 }

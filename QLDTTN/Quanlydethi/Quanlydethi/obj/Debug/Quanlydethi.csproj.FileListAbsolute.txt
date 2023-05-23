@@ -60,3 +60,5 @@ D:\QLTTN\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.csproj.GenerateRes
 D:\QLTTN\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.csproj.CoreCompileInputs.cache
 D:\QLTTN\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.exe
 D:\QLTTN\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.pdb
+D:\QLTTN\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.GUI.Admin.FormClass.resources
+D:\QLTTN\QLDTTN\Quanlydethi\Quanlydethi\obj\Debug\Quanlydethi.GUI.Admin.FormSub.resources

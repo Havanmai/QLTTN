@@ -41,14 +41,18 @@
             this.HistoryExamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ExamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.creatStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grb_System = new System.Windows.Forms.GroupBox();
+            this.grbHelp = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.lbl_username = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.grbHelp = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.subToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.classToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.grb_System.SuspendLayout();
             this.grbHelp.SuspendLayout();
@@ -98,6 +102,7 @@
             this.UserToolStripMenuItem.Name = "UserToolStripMenuItem";
             this.UserToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.UserToolStripMenuItem.Text = "Tài khoản User";
+            this.UserToolStripMenuItem.Click += new System.EventHandler(this.UserToolStripMenuItem_Click_1);
             // 
             // changePassToolStripMenuItem
             // 
@@ -119,36 +124,41 @@
             this.sltStudent,
             this.QuestionToolStripMenuItem,
             this.HistoryExamToolStripMenuItem,
-            this.ExamToolStripMenuItem});
+            this.ExamToolStripMenuItem,
+            this.subToolStripMenuItem,
+            this.classToolStripMenuItem});
             this.ManageToolStripMenuItem.Name = "ManageToolStripMenuItem";
             this.ManageToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.ManageToolStripMenuItem.Text = "Quản lý";
             // 
             // sltStudent
             // 
+            this.sltStudent.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listStudentToolStripMenuItem,
+            this.creatStudentToolStripMenuItem});
             this.sltStudent.Name = "sltStudent";
-            this.sltStudent.Size = new System.Drawing.Size(179, 22);
+            this.sltStudent.Size = new System.Drawing.Size(180, 22);
             this.sltStudent.Text = "Danh sách sinh viên";
             this.sltStudent.Click += new System.EventHandler(this.sltStudent_Click);
             // 
             // QuestionToolStripMenuItem
             // 
             this.QuestionToolStripMenuItem.Name = "QuestionToolStripMenuItem";
-            this.QuestionToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.QuestionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.QuestionToolStripMenuItem.Text = "Danh sách câu hỏi";
             this.QuestionToolStripMenuItem.Click += new System.EventHandler(this.QuestionToolStripMenuItem_Click);
             // 
             // HistoryExamToolStripMenuItem
             // 
             this.HistoryExamToolStripMenuItem.Name = "HistoryExamToolStripMenuItem";
-            this.HistoryExamToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.HistoryExamToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.HistoryExamToolStripMenuItem.Text = "Lịch sử bài thi";
             this.HistoryExamToolStripMenuItem.Click += new System.EventHandler(this.HistoryExamToolStripMenuItem_Click);
             // 
             // ExamToolStripMenuItem
             // 
             this.ExamToolStripMenuItem.Name = "ExamToolStripMenuItem";
-            this.ExamToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.ExamToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ExamToolStripMenuItem.Text = "Làm bài thi";
             this.ExamToolStripMenuItem.Click += new System.EventHandler(this.ExamToolStripMenuItem_Click);
             // 
@@ -158,6 +168,20 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.helpToolStripMenuItem.Text = "Trợ giúp";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
+            // 
+            // listStudentToolStripMenuItem
+            // 
+            this.listStudentToolStripMenuItem.Name = "listStudentToolStripMenuItem";
+            this.listStudentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listStudentToolStripMenuItem.Text = "Chi tiết danh sách";
+            this.listStudentToolStripMenuItem.Click += new System.EventHandler(this.listStudentToolStripMenuItem_Click);
+            // 
+            // creatStudentToolStripMenuItem
+            // 
+            this.creatStudentToolStripMenuItem.Name = "creatStudentToolStripMenuItem";
+            this.creatStudentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.creatStudentToolStripMenuItem.Text = "Thêm sinh viên";
+            this.creatStudentToolStripMenuItem.Click += new System.EventHandler(this.creatStudentToolStripMenuItem_Click);
             // 
             // grb_System
             // 
@@ -171,6 +195,50 @@
             this.grb_System.Size = new System.Drawing.Size(776, 377);
             this.grb_System.TabIndex = 1;
             this.grb_System.TabStop = false;
+            // 
+            // grbHelp
+            // 
+            this.grbHelp.BackColor = System.Drawing.Color.Transparent;
+            this.grbHelp.Controls.Add(this.label5);
+            this.grbHelp.Controls.Add(this.label4);
+            this.grbHelp.Controls.Add(this.label3);
+            this.grbHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbHelp.Location = new System.Drawing.Point(38, 48);
+            this.grbHelp.Name = "grbHelp";
+            this.grbHelp.Size = new System.Drawing.Size(685, 300);
+            this.grbHelp.TabIndex = 3;
+            this.grbHelp.TabStop = false;
+            this.grbHelp.Text = "Thông tin liên hệ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(342, 231);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(256, 24);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Email : HoangDK@gmai.com";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(338, 183);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(152, 24);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "SDT : 013654789";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(34, 118);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(486, 24);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Mọi thắc mắc xin liên hệ : HVM - DKH để  được giải đáp ";
             // 
             // lbl_username
             // 
@@ -204,49 +272,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Xin chào, ";
             // 
-            // grbHelp
+            // subToolStripMenuItem
             // 
-            this.grbHelp.BackColor = System.Drawing.Color.Transparent;
-            this.grbHelp.Controls.Add(this.label5);
-            this.grbHelp.Controls.Add(this.label4);
-            this.grbHelp.Controls.Add(this.label3);
-            this.grbHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbHelp.Location = new System.Drawing.Point(38, 48);
-            this.grbHelp.Name = "grbHelp";
-            this.grbHelp.Size = new System.Drawing.Size(685, 300);
-            this.grbHelp.TabIndex = 3;
-            this.grbHelp.TabStop = false;
-            this.grbHelp.Text = "Thông tin liên hệ";
+            this.subToolStripMenuItem.Name = "subToolStripMenuItem";
+            this.subToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.subToolStripMenuItem.Text = "Quản lý môn học";
+            this.subToolStripMenuItem.Click += new System.EventHandler(this.subToolStripMenuItem_Click);
             // 
-            // label3
+            // classToolStripMenuItem
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(34, 118);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(486, 24);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Mọi thắc mắc xin liên hệ : HVM - DKH để  được giải đáp ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(338, 183);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(152, 24);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "SDT : 013654789";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(342, 231);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(256, 24);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Email : HoangDK@gmai.com";
+            this.classToolStripMenuItem.Name = "classToolStripMenuItem";
+            this.classToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.classToolStripMenuItem.Text = "Quản lý lớp hoc";
+            this.classToolStripMenuItem.Click += new System.EventHandler(this.classToolStripMenuItem_Click);
             // 
             // FormHome
             // 
@@ -292,5 +330,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ToolStripMenuItem listStudentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem creatStudentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem subToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem classToolStripMenuItem;
     }
 }

@@ -37,6 +37,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -52,11 +53,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DTO\Lop.cs" />
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\FormClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\FormClass.Designer.cs">
+      <DependentUpon>FormClass.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Admin\FormQuestion.cs">
       <SubType>Form</SubType>
@@ -81,6 +89,12 @@
     </Compile>
     <Compile Include="GUI\Admin\FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\FormSub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\FormSub.Designer.cs">
+      <DependentUpon>FormSub.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FormChangePassword.cs">
       <SubType>Form</SubType>
@@ -120,11 +134,19 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="THITRACNGHIEMDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>THITRACNGHIEMDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\FormClass.resx">
+      <DependentUpon>FormClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\FormQuestion.resx">
       <DependentUpon>FormQuestion.cs</DependentUpon>
@@ -134,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\FormStudent.resx">
       <DependentUpon>FormStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\FormSub.resx">
+      <DependentUpon>FormSub.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormChangePassword.resx">
       <DependentUpon>FormChangePassword.cs</DependentUpon>
@@ -172,6 +197,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="THITRACNGHIEMDataSet.xsc">
+      <DependentUpon>THITRACNGHIEMDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="THITRACNGHIEMDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>THITRACNGHIEMDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="THITRACNGHIEMDataSet.xss">
+      <DependentUpon>THITRACNGHIEMDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

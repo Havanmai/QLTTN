@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.grpbQuestion = new System.Windows.Forms.GroupBox();
+            this.cmbCateQues = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbSub = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.cmSearch = new System.Windows.Forms.ComboBox();
             this.cbAnswer = new System.Windows.Forms.ComboBox();
             this.txtD = new System.Windows.Forms.TextBox();
@@ -60,6 +64,10 @@
             // 
             // grpbQuestion
             // 
+            this.grpbQuestion.Controls.Add(this.cmbCateQues);
+            this.grpbQuestion.Controls.Add(this.label3);
+            this.grpbQuestion.Controls.Add(this.cmbSub);
+            this.grpbQuestion.Controls.Add(this.label2);
             this.grpbQuestion.Controls.Add(this.cmSearch);
             this.grpbQuestion.Controls.Add(this.cbAnswer);
             this.grpbQuestion.Controls.Add(this.txtD);
@@ -93,6 +101,47 @@
             this.grpbQuestion.Text = "Thiết lập câu hỏi";
             this.grpbQuestion.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // cmbCateQues
+            // 
+            this.cmbCateQues.FormattingEnabled = true;
+            this.cmbCateQues.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D"});
+            this.cmbCateQues.Location = new System.Drawing.Point(127, 201);
+            this.cmbCateQues.Name = "cmbCateQues";
+            this.cmbCateQues.Size = new System.Drawing.Size(348, 32);
+            this.cmbCateQues.TabIndex = 27;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(28, 210);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 17);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Loại câu hỏi :";
+            // 
+            // cmbSub
+            // 
+            this.cmbSub.FormattingEnabled = true;
+            this.cmbSub.Location = new System.Drawing.Point(128, 85);
+            this.cmbSub.Name = "cmbSub";
+            this.cmbSub.Size = new System.Drawing.Size(347, 32);
+            this.cmbSub.TabIndex = 25;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(34, 94);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 17);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Môn học : ";
+            // 
             // cmSearch
             // 
             this.cmSearch.FormattingEnabled = true;
@@ -100,7 +149,7 @@
             "Tìm Kiếm Theo Mã",
             "Tìm Kiếm Gần Đúng Câu Hỏi",
             "Tìm Kiếm Đáp Án Đúng"});
-            this.cmSearch.Location = new System.Drawing.Point(741, 238);
+            this.cmSearch.Location = new System.Drawing.Point(737, 262);
             this.cmSearch.Name = "cmSearch";
             this.cmSearch.Size = new System.Drawing.Size(315, 32);
             this.cmSearch.TabIndex = 23;
@@ -113,57 +162,57 @@
             "B",
             "C",
             "D"});
-            this.cbAnswer.Location = new System.Drawing.Point(128, 187);
+            this.cbAnswer.Location = new System.Drawing.Point(682, 213);
             this.cbAnswer.Name = "cbAnswer";
-            this.cbAnswer.Size = new System.Drawing.Size(347, 32);
+            this.cbAnswer.Size = new System.Drawing.Size(374, 32);
             this.cbAnswer.TabIndex = 22;
             // 
             // txtD
             // 
-            this.txtD.Location = new System.Drawing.Point(682, 179);
+            this.txtD.Location = new System.Drawing.Point(682, 170);
             this.txtD.Name = "txtD";
             this.txtD.Size = new System.Drawing.Size(374, 29);
             this.txtD.TabIndex = 21;
             // 
             // txtC
             // 
-            this.txtC.Location = new System.Drawing.Point(682, 138);
+            this.txtC.Location = new System.Drawing.Point(682, 127);
             this.txtC.Name = "txtC";
             this.txtC.Size = new System.Drawing.Size(374, 29);
             this.txtC.TabIndex = 20;
             // 
             // txtB
             // 
-            this.txtB.Location = new System.Drawing.Point(682, 98);
+            this.txtB.Location = new System.Drawing.Point(682, 82);
             this.txtB.Name = "txtB";
             this.txtB.Size = new System.Drawing.Size(374, 29);
             this.txtB.TabIndex = 19;
             // 
             // txtA
             // 
-            this.txtA.Location = new System.Drawing.Point(682, 50);
+            this.txtA.Location = new System.Drawing.Point(682, 38);
             this.txtA.Name = "txtA";
             this.txtA.Size = new System.Drawing.Size(374, 29);
             this.txtA.TabIndex = 18;
             // 
             // txtQuestion
             // 
-            this.txtQuestion.Location = new System.Drawing.Point(128, 98);
+            this.txtQuestion.Location = new System.Drawing.Point(128, 127);
             this.txtQuestion.Name = "txtQuestion";
-            this.txtQuestion.Size = new System.Drawing.Size(347, 69);
+            this.txtQuestion.Size = new System.Drawing.Size(347, 55);
             this.txtQuestion.TabIndex = 17;
             this.txtQuestion.Text = "";
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(128, 229);
+            this.txtSearch.Location = new System.Drawing.Point(128, 254);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(347, 29);
             this.txtSearch.TabIndex = 16;
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(128, 50);
+            this.txtCode.Location = new System.Drawing.Point(128, 41);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(347, 29);
             this.txtCode.TabIndex = 15;
@@ -182,7 +231,7 @@
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(981, 294);
+            this.btnExit.Location = new System.Drawing.Point(981, 302);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 30);
             this.btnExit.TabIndex = 13;
@@ -215,7 +264,7 @@
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(858, 291);
+            this.btnSearch.Location = new System.Drawing.Point(861, 300);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 34);
             this.btnSearch.TabIndex = 10;
@@ -238,7 +287,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(600, 238);
+            this.label1.Location = new System.Drawing.Point(597, 266);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(134, 17);
             this.label1.TabIndex = 8;
@@ -248,7 +297,7 @@
             // 
             this.lblSearch.AutoSize = true;
             this.lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(37, 238);
+            this.lblSearch.Location = new System.Drawing.Point(28, 262);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(76, 17);
             this.lblSearch.TabIndex = 7;
@@ -258,7 +307,7 @@
             // 
             this.lblD.AutoSize = true;
             this.lblD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblD.Location = new System.Drawing.Point(600, 187);
+            this.lblD.Location = new System.Drawing.Point(600, 179);
             this.lblD.Name = "lblD";
             this.lblD.Size = new System.Drawing.Size(84, 17);
             this.lblD.TabIndex = 6;
@@ -268,7 +317,7 @@
             // 
             this.lblC.AutoSize = true;
             this.lblC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblC.Location = new System.Drawing.Point(597, 147);
+            this.lblC.Location = new System.Drawing.Point(600, 136);
             this.lblC.Name = "lblC";
             this.lblC.Size = new System.Drawing.Size(75, 17);
             this.lblC.TabIndex = 5;
@@ -278,7 +327,7 @@
             // 
             this.lblB.AutoSize = true;
             this.lblB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblB.Location = new System.Drawing.Point(597, 107);
+            this.lblB.Location = new System.Drawing.Point(597, 94);
             this.lblB.Name = "lblB";
             this.lblB.Size = new System.Drawing.Size(79, 17);
             this.lblB.TabIndex = 4;
@@ -288,7 +337,7 @@
             // 
             this.lblA.AutoSize = true;
             this.lblA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblA.Location = new System.Drawing.Point(597, 62);
+            this.lblA.Location = new System.Drawing.Point(597, 53);
             this.lblA.Name = "lblA";
             this.lblA.Size = new System.Drawing.Size(75, 17);
             this.lblA.TabIndex = 3;
@@ -298,7 +347,7 @@
             // 
             this.lblanswer.AutoSize = true;
             this.lblanswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblanswer.Location = new System.Drawing.Point(37, 187);
+            this.lblanswer.Location = new System.Drawing.Point(600, 222);
             this.lblanswer.Name = "lblanswer";
             this.lblanswer.Size = new System.Drawing.Size(66, 17);
             this.lblanswer.TabIndex = 2;
@@ -308,7 +357,7 @@
             // 
             this.lblquestion.AutoSize = true;
             this.lblquestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblquestion.Location = new System.Drawing.Point(32, 98);
+            this.lblquestion.Location = new System.Drawing.Point(34, 136);
             this.lblquestion.Name = "lblquestion";
             this.lblquestion.Size = new System.Drawing.Size(68, 17);
             this.lblquestion.TabIndex = 1;
@@ -376,5 +425,9 @@
         private System.Windows.Forms.ComboBox cbAnswer;
         private System.Windows.Forms.TextBox txtD;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cmbSub;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmbCateQues;
+        private System.Windows.Forms.Label label3;
     }
 }

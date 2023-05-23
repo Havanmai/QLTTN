@@ -39,11 +39,13 @@
             this.lblSub = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnStart);
             this.panel1.Controls.Add(this.lblNameUser);
@@ -75,7 +77,7 @@
             this.btnStart.BackColor = System.Drawing.Color.Red;
             this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStart.ForeColor = System.Drawing.Color.Snow;
-            this.btnStart.Location = new System.Drawing.Point(3, 259);
+            this.btnStart.Location = new System.Drawing.Point(21, 259);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(120, 52);
             this.btnStart.TabIndex = 8;
@@ -97,7 +99,7 @@
             this.dtpNow.Enabled = false;
             this.dtpNow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNow.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNow.Location = new System.Drawing.Point(123, 76);
+            this.dtpNow.Location = new System.Drawing.Point(123, 82);
             this.dtpNow.Name = "dtpNow";
             this.dtpNow.Size = new System.Drawing.Size(118, 23);
             this.dtpNow.TabIndex = 6;
@@ -148,7 +150,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 76);
+            this.label1.Location = new System.Drawing.Point(23, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 17);
             this.label1.TabIndex = 1;
@@ -158,11 +160,21 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(20, 26);
+            this.lblName.Location = new System.Drawing.Point(20, 52);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(81, 17);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Họ và tên : ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(18, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 17);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Mã sinh viên : ";
             // 
             // FormStartExam
             // 
@@ -193,5 +205,6 @@
         private System.Windows.Forms.Label lblSub;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label label2;
     }
 }

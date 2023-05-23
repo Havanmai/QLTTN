@@ -1,4 +1,5 @@
 ﻿using Quanlydethi.DAO;
+using Quanlydethi.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,9 +7,11 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Quanlydethi.GUI.Admin
 {
@@ -17,6 +20,7 @@ namespace Quanlydethi.GUI.Admin
         public FormRegister()
         {
             InitializeComponent();
+            
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -44,11 +48,28 @@ namespace Quanlydethi.GUI.Admin
             con2.Close();
             return tatkt;
         }
+
+        private void getALLLop()
+        {
+            DataTable data= new DataTable();
+            
+
+            SqlConnection con2 = new SqlConnection(DataProvider.sqlConnection);
+            con2.Open();
+            SqlCommand cmd = new SqlCommand("SELECT MALOP, TENLOP FROM LOP", con2);
+                SqlDataReader r = cmd.ExecuteReader();
+                data.Load(r);
+                cmbLop.DisplayMember = "TENLOP";
+                cmbLop.ValueMember = "MALOP";
+                cmbLop.DataSource = data;
+                r.Close();
+            con2.Close();
+        }
         //  Khi dang ky Ta can Them du lieu vao Hai bang :v
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text.Trim().Equals("") || txtPassword.Text.Trim().Equals("") || txtEmail.Text.Trim().Equals("") ||
+            if (txtUsername.Text.Trim().Equals("") || txtPassword.Text.Trim().Equals("") || txtEmail.Text.Trim().Equals("") || 
                dtpDateBorn.Text.Trim().Equals("") || txtAddress.Text.Trim().Equals(""))
             {
                 MessageBox.Show("Thông Tin Đã đủ chưa , Thiếu kìa ");
@@ -57,10 +78,10 @@ namespace Quanlydethi.GUI.Admin
             {
                 if (kiemtratontai() == true)
                 {
-                    MessageBox.Show("Không thể đăng ký, Người dùng đã tồn tại");
+                   MessageBox.Show("Không thể đăng ký, Người dùng đã tồn tại");
                 }
                 else
-                {
+               {
                     try
                     {
 
@@ -76,19 +97,17 @@ namespace Quanlydethi.GUI.Admin
                         SqlCommand cmd = new SqlCommand();
                         cmd.Connection = con;
                         cmd.CommandType = CommandType.StoredProcedure;
-                        //Tên PROC
-                        cmd.CommandText = "INSERT_USER";
-                        cmd.Parameters.Add(new SqlParameter("@sUsername", txtUsername.Text.Trim()));
-                        cmd.Parameters.Add(new SqlParameter("@sPassword", txtPassword.Text.Trim()));
-                        cmd.Parameters.Add(new SqlParameter("@srole", false));
-                        cmd.Parameters.Add(new SqlParameter("@sMATHISINH", txtUsername.Text.Trim()));
+                    //Tên PROC
+                         cmd.CommandText = "INSERT_USER";
+                        cmd.Parameters.Add(new SqlParameter("@sHOTENTHISINH", txtUsername.Text.Trim()));
                         cmd.Parameters.Add(new SqlParameter("@sNGAYGIANHAP", month + "/" + day + "/" + year));
                         cmd.Parameters.Add(new SqlParameter("@sGMAIL", txtEmail.Text.Trim()));
                         cmd.Parameters.Add(new SqlParameter("@sNGAYSINH", dtpDateBorn.Text.Trim()));
                         cmd.Parameters.Add(new SqlParameter("@sDIACHI", txtAddress.Text.Trim()));
+                        cmd.Parameters.Add(new SqlParameter("@iMALOP", Convert.ToInt32(cmbLop.SelectedItem)));
 
-                        //Thực thi Stored Procedure
-                        cmd.ExecuteNonQuery();
+                    //Thực thi Stored Procedure
+                    cmd.ExecuteNonQuery();
                         con.Close();
 
                         MessageBox.Show("Đăng ký thành công tài khoản mới");
@@ -101,6 +120,11 @@ namespace Quanlydethi.GUI.Admin
                 }
 
             }
+        }
+
+        private void FormRegister_Load(object sender, EventArgs e)
+        {
+            this.getALLLop();
         }
     }
 }

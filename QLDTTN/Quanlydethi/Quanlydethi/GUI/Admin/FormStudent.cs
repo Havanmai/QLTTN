@@ -33,7 +33,7 @@ namespace Quanlydethi.GUI.Admin
 
                 SqlConnection con = new SqlConnection(DataProvider.sqlConnection);
                 con.Open();
-                String Query = "SELECT MATHISINH,NGAYSINH,NGAYGIANHAP,DIACHI,GMAIL FROM THISINHX";
+                String Query = "SELECT MATHISINH,HOTENTHISINH,NGAYSINH,NGAYGIANHAP,DIACHI,GMAIL FROM THISINHX";
                 SqlCommand cmd = new SqlCommand(Query, con);
                 SqlDataAdapter adap = new SqlDataAdapter(cmd);
                 adap.Fill(data);
@@ -42,7 +42,7 @@ namespace Quanlydethi.GUI.Admin
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lõi :" + ex);
+                MessageBox.Show("Lỗi :" + ex);
                 // DataGridViewRow
             }
             return data;
@@ -88,6 +88,7 @@ namespace Quanlydethi.GUI.Admin
 
                     cmd.CommandText = "DELETE_THISINH";
 
+
                     cmd.Parameters.Add(new SqlParameter("@sMATHISNH", txtCode.Text.Trim()));
 
                     cmd.ExecuteNonQuery();
@@ -121,6 +122,24 @@ namespace Quanlydethi.GUI.Admin
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.DataSource = GetData().Tables[0];
+            this.getALLLop();
+        }
+
+        private void getALLLop()
+        {
+            DataTable data = new DataTable();
+
+
+            SqlConnection con2 = new SqlConnection(DataProvider.sqlConnection);
+            con2.Open();
+            SqlCommand cmd = new SqlCommand("SELECT MALOP, TENLOP FROM LOP", con2);
+            SqlDataReader r = cmd.ExecuteReader();
+            data.Load(r);
+            cmbLop.DisplayMember = "TENLOP";
+            cmbLop.ValueMember = "MALOP";
+            cmbLop.DataSource = data;
+            r.Close();
+            con2.Close();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -132,5 +151,13 @@ namespace Quanlydethi.GUI.Admin
         {
             this.Close();
         }
+
+
+        private void getDetailTS()
+        {
+
+        }
+
+      
     }
 }
