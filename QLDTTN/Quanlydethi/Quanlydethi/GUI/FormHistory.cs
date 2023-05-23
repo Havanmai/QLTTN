@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,9 +17,14 @@ namespace Quanlydethi.GUI
 {
     public partial class FormHistory : Form
     {
-        public FormHistory()
+
+        public Boolean isAdminH;
+        public String idH;
+        public FormHistory(Boolean isAdmin, string id)
         {
             InitializeComponent();
+            isAdminH = isAdmin;
+            idH = id;
         }
 
        
@@ -259,9 +265,25 @@ namespace Quanlydethi.GUI
         {
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridView1.DataSource = getLichsuthi().Tables[0];
-            getALLMon();
-            getALLLop();
+            if (isAdminH)
+            {
+                dataGridView1.DataSource = getLichsuthi().Tables[0];
+                getALLMon();
+                getALLLop();
+
+            }
+            else
+            {
+                txtCodeSV.Text = idH;
+                txtCodeSV.Enabled = true;
+                getALLLop();
+                cmbLop.Visible=false;
+                label2.Visible=false;
+                dataGridView1.DataSource =getLichsuthibyCOD().Tables[0];
+                getALLMon();
+
+            }
+           
         }
 
         private void getALLMon()

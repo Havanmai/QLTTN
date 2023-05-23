@@ -119,9 +119,9 @@
             this.grbQuestion.Controls.Add(this.rdbA);
             this.grbQuestion.Controls.Add(this.lblQuestionContent);
             this.grbQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbQuestion.Location = new System.Drawing.Point(13, 152);
+            this.grbQuestion.Location = new System.Drawing.Point(13, 193);
             this.grbQuestion.Name = "grbQuestion";
-            this.grbQuestion.Size = new System.Drawing.Size(1063, 509);
+            this.grbQuestion.Size = new System.Drawing.Size(1063, 468);
             this.grbQuestion.TabIndex = 5;
             this.grbQuestion.TabStop = false;
             this.grbQuestion.Text = "Câu hỏi ";
@@ -129,7 +129,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(556, 359);
+            this.label7.Location = new System.Drawing.Point(61, 385);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(21, 20);
             this.label7.TabIndex = 8;
@@ -138,7 +138,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(544, 118);
+            this.label6.Location = new System.Drawing.Point(61, 209);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(20, 20);
             this.label6.TabIndex = 7;
@@ -147,7 +147,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(61, 357);
+            this.label5.Location = new System.Drawing.Point(61, 307);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(20, 20);
             this.label5.TabIndex = 6;
@@ -157,7 +157,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(51, 120);
+            this.label4.Location = new System.Drawing.Point(61, 118);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(20, 20);
             this.label4.TabIndex = 5;
@@ -165,19 +165,22 @@
             // 
             // rdbD
             // 
+            this.rdbD.AllowDrop = true;
             this.rdbD.AutoSize = true;
-            this.rdbD.Location = new System.Drawing.Point(594, 357);
+            this.rdbD.Location = new System.Drawing.Point(87, 385);
             this.rdbD.Name = "rdbD";
             this.rdbD.Size = new System.Drawing.Size(119, 24);
             this.rdbD.TabIndex = 4;
             this.rdbD.TabStop = true;
             this.rdbD.Text = "radioButton1";
             this.rdbD.UseVisualStyleBackColor = true;
+            this.rdbD.CheckedChanged += new System.EventHandler(this.rdbD_CheckedChanged);
             // 
             // rdbC
             // 
+            this.rdbC.AllowDrop = true;
             this.rdbC.AutoSize = true;
-            this.rdbC.Location = new System.Drawing.Point(101, 359);
+            this.rdbC.Location = new System.Drawing.Point(90, 305);
             this.rdbC.Name = "rdbC";
             this.rdbC.Size = new System.Drawing.Size(119, 24);
             this.rdbC.TabIndex = 3;
@@ -187,8 +190,9 @@
             // 
             // rdbB
             // 
+            this.rdbB.AllowDrop = true;
             this.rdbB.AutoSize = true;
-            this.rdbB.Location = new System.Drawing.Point(594, 118);
+            this.rdbB.Location = new System.Drawing.Point(87, 209);
             this.rdbB.Name = "rdbB";
             this.rdbB.Size = new System.Drawing.Size(119, 24);
             this.rdbB.TabIndex = 2;
@@ -198,6 +202,7 @@
             // 
             // rdbA
             // 
+            this.rdbA.AllowDrop = true;
             this.rdbA.AutoSize = true;
             this.rdbA.Location = new System.Drawing.Point(90, 120);
             this.rdbA.Name = "rdbA";
@@ -209,22 +214,21 @@
             // 
             // lblQuestionContent
             // 
-            this.lblQuestionContent.AutoSize = true;
-            this.lblQuestionContent.Location = new System.Drawing.Point(7, 39);
+            this.lblQuestionContent.Location = new System.Drawing.Point(10, 34);
             this.lblQuestionContent.Name = "lblQuestionContent";
-            this.lblQuestionContent.Size = new System.Drawing.Size(0, 20);
-            this.lblQuestionContent.TabIndex = 0;
+            this.lblQuestionContent.Size = new System.Drawing.Size(1042, 61);
+            this.lblQuestionContent.TabIndex = 9;
+            this.lblQuestionContent.Text = "label9";
             // 
             // btnSubmit
             // 
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(1001, 15);
+            this.btnSubmit.Location = new System.Drawing.Point(976, 15);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 31);
             this.btnSubmit.TabIndex = 6;
             this.btnSubmit.Text = "Nộp bài";
             this.btnSubmit.UseVisualStyleBackColor = true;
-            this.btnSubmit.Visible = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // lblTime

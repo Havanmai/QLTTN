@@ -1,14 +1,8 @@
 ﻿using Quanlydethi.DAO;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Quanlydethi.GUI.User
@@ -38,6 +32,7 @@ namespace Quanlydethi.GUI.User
             Mon = Tenmon;
             MaThiSinh=Ma;
             TenThiSinh = name;
+            btnSubmit.Enabled = true;
         }
 
 
@@ -58,6 +53,7 @@ namespace Quanlydethi.GUI.User
             giay = 1;//nhap thoi gian thi 
             phut = 30;
             gio = 0;
+            btnSubmit.Enabled = true;
         }
 
         private int SocauNgauNhien = 20;
@@ -220,7 +216,7 @@ namespace Quanlydethi.GUI.User
             RandomCauTraloi();
             Load_CauHoi_VaoControl();
             timer1.Start();
-
+            btnSubmit.Enabled = true;
 
         }
 
@@ -291,12 +287,20 @@ namespace Quanlydethi.GUI.User
             }
         }
 
+        private void rdbD_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
         private void FormExam_Load(object sender, EventArgs e)
         {
             LoadcauhoiLenFrom();
             lblName.Text = TenThiSinh;
             lblSub.Text = Mon;
             lbMa.Text = MaThiSinh;
+            btnSubmit.Enabled = true;
         }
 
         int th = 0;
@@ -323,7 +327,6 @@ namespace Quanlydethi.GUI.User
                 this.Close();
                 lblTime.Text = "0:0:0";
                 btnPre.Enabled = false;
-                btnSubmit.Enabled = false;
                 btnNext.Enabled = false;
                 timer1.Stop();
                 GhiLaiDapAnTS();

@@ -145,7 +145,7 @@ namespace Quanlydethi.GUI
         private void HistoryExamToolStripMenuItem_Click(object sender, EventArgs e)
         {
             grbHelp.Visible = false;
-            FormHistory history =new FormHistory();
+            FormHistory history =new FormHistory(Check_Role(),IdName);
             history.Show();
         }
 

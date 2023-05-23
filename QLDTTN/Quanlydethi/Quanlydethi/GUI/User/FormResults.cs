@@ -61,6 +61,7 @@ namespace Quanlydethi.GUI.User
                 cmd.Parameters.Add(new SqlParameter("@sSOCAUDUNG", Scaudung));
                 cmd.Parameters.Add(new SqlParameter("@sSOCAUSAI", ScauSai));
                 cmd.Parameters.Add(new SqlParameter("@sDIEM", Diem));
+                cmd.Parameters.Add(new SqlParameter("@iMAMON", 1));
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
