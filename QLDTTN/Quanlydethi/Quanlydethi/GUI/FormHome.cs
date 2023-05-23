@@ -172,7 +172,7 @@ namespace Quanlydethi.GUI
         private void UserToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             grbHelp.Visible = false;
-            FormCreateTS user = new FormCreateTS();
+            FormRegister user = new FormRegister();
             user.Show();
         }
 

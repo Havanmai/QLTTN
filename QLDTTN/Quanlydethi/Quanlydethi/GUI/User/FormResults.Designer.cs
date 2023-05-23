@@ -84,7 +84,7 @@
             this.lblPoint.AutoSize = true;
             this.lblPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPoint.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblPoint.Location = new System.Drawing.Point(400, 144);
+            this.lblPoint.Location = new System.Drawing.Point(400, 141);
             this.lblPoint.Name = "lblPoint";
             this.lblPoint.Size = new System.Drawing.Size(79, 29);
             this.lblPoint.TabIndex = 4;
@@ -95,7 +95,7 @@
             this.lblTrue.AutoSize = true;
             this.lblTrue.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrue.ForeColor = System.Drawing.Color.MediumBlue;
-            this.lblTrue.Location = new System.Drawing.Point(400, 216);
+            this.lblTrue.Location = new System.Drawing.Point(400, 213);
             this.lblTrue.Name = "lblTrue";
             this.lblTrue.Size = new System.Drawing.Size(79, 29);
             this.lblTrue.TabIndex = 5;
@@ -106,7 +106,7 @@
             this.lblFalse.AutoSize = true;
             this.lblFalse.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFalse.ForeColor = System.Drawing.Color.DarkMagenta;
-            this.lblFalse.Location = new System.Drawing.Point(405, 314);
+            this.lblFalse.Location = new System.Drawing.Point(400, 302);
             this.lblFalse.Name = "lblFalse";
             this.lblFalse.Size = new System.Drawing.Size(79, 29);
             this.lblFalse.TabIndex = 6;
